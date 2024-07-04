@@ -41,8 +41,8 @@ export default function AboutPage() {
           <AboutDiv title="Coding experience" className="">
             I started coding in 2017, almost 7 years ago. I spent the first 4
             years soley teaching myself Java. Eventually, I moved onto other
-            languages such as C, C#, Python, and finally Typescript. I've been
-            doing full-stack web development for just over 2 years now.
+            languages such as C, C#, Python, and finally Typescript. I&apos;ve
+            been doing full-stack web development for just over 2 years now.
           </AboutDiv>
 
           <AboutDiv title="Education" className="row-start-2 col-start-1">

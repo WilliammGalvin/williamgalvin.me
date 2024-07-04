@@ -32,7 +32,7 @@ export default function Home() {
         </h2>
 
         <p className="my-12 max-w-[500px]">
-          Hi, I'm William, a passionate front-end developer. Dedicated to
+          Hi, I&apos;m William, a passionate front-end developer. Dedicated to
           mastering and innoving the web.
         </p>
 
