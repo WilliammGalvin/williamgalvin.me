@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --cube-size: 200px;
+  --half-cube-size: calc(var(--cube-size) / 2);
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes rotateNameCube {
+  from {
+    transform: translateX(calc(-1 * var(--half-cube-size)))
+      translateY(calc(-1 * var(--half-cube-size))) rotate3d(0, 0, 0, 0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--half-cube-size)))
+      translateY(calc(-1 * var(--half-cube-size))) rotate3d(1, 0.7, 0, 360deg);
+  }
+}
+
+#cube {
+  position: relative;
+  transform-style: preserve-3d;
+
+  animation: rotateNameCube 20s linear infinite;
+}
+
+.cube-container {
+  width: calc(var(--cube-size) * 2);
+  height: calc(var(--cube-size) * 2);
+}
+
+.cube-face {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.35rem;
+  border: 2px solid black;
+  background-color: white;
+
+  width: var(--cube-size);
+  height: var(--cube-size);
+}
+
+#cube-front {
+  transform: translateZ(var(--half-cube-size));
+}
+
+#cube-back {
+  transform: translateZ(calc(-1 * var(--half-cube-size))) rotateY(180deg);
+}
+
+#cube-top {
+  transform: translateY(calc(-1 * var(--half-cube-size))) rotateX(90deg);
+}
+
+#cube-bottom {
+  transform: translateY(var(--half-cube-size)) rotateX(-90deg);
+}
+
+#cube-right {
+  transform: rotateY(90deg) translateZ(var(--half-cube-size));
+}
+
+#cube-left {
+  transform: rotateY(-90deg) translateZ(var(--half-cube-size));
+}
