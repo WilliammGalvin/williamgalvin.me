@@ -1,3 +1,5 @@
+import "../styles/cube.css";
+
 const NameCube = () => {
   const sides: string[] = ["front", "back", "left", "right", "top", "bottom"];
 

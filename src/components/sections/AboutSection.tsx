@@ -1,9 +1,9 @@
-import PageWrapper from "@/components/PageWrapper";
 import { FaJava, FaPython, FaReact } from "react-icons/fa";
 import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiC, SiCsharp } from "react-icons/si";
+import SectionWrapper from "../SectionWrapper";
 
-export default function AboutPage() {
+const AboutSection = () => {
   const technologies: {
     title: string;
     technologies: { text: string; icon: React.ReactNode }[];
@@ -28,7 +28,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <PageWrapper
+    <SectionWrapper
       title={{
         header: "All about me",
         description:
@@ -38,7 +38,7 @@ export default function AboutPage() {
     >
       <div className="w-5/6 mb-12">
         <div className="grid grid-cols-2 grid-rows-2 gap-4">
-          <AboutDiv title="Coding experience" className="">
+          <AboutDiv title="Coding experience">
             I started coding in 2017, almost 7 years ago. I spent the first 4
             years soley teaching myself Java. Eventually, I moved onto other
             languages such as C, C#, Python, and finally Typescript. I&apos;ve
@@ -78,9 +78,9 @@ export default function AboutPage() {
           </AboutDiv>
         </div>
       </div>
-    </PageWrapper>
+    </SectionWrapper>
   );
-}
+};
 
 const AboutDiv = ({
   title,
@@ -100,3 +100,5 @@ const AboutDiv = ({
     </div>
   );
 };
+
+export default AboutSection;

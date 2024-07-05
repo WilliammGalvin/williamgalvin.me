@@ -1,16 +1,15 @@
 "use client";
 
-import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import { motion, useAnimate } from "framer-motion";
 
-const ProjectButton = () => {
+const ProjectButton = ({ goToProject }: { goToProject: () => void }) => {
   const [scope, animate] = useAnimate();
 
   return (
-    <Link
-      href="/projects"
-      className="relative flex items-center"
+    <button
+      onClick={goToProject}
+      className="relative inline-flex items-center"
       onMouseEnter={(_) => {
         animate(scope.current, {
           marginLeft: ["0", "5px"],
@@ -35,7 +34,7 @@ const ProjectButton = () => {
           <FiArrowRight />
         </motion.span>
       </div>
-    </Link>
+    </button>
   );
 };
 

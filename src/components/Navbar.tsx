@@ -1,32 +1,22 @@
-"use client";
-
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { motion } from "framer-motion";
 
-const Navbar = () => {
-  const { push } = useRouter();
-  const [currentLink, setCurrentLink] = useState<number>(0);
+type NavLinks = {
+  title: string;
+  component: React.ReactNode;
+}[];
 
-  const links: { name: string; href: string }[] = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
-  ];
-
-  const isSelected = (index: number) => {
-    return index === currentLink;
-  };
-
-  const changeLink = (index: number, href: string) => {
-    setCurrentLink(index);
-    push(href);
-  };
-
+const Navbar = ({
+  links,
+  isSelected,
+  changeLinkByIndex,
+}: {
+  links: NavLinks;
+  isSelected: (index: number) => boolean;
+  changeLinkByIndex: (index: number) => number;
+}) => {
   return (
-    <nav className="flex justify-between px-8 p-6 border-black">
+    <nav className="w-full flex justify-between px-8 p-6 border-black">
       <Link href="/">William Galvin</Link>
 
       <motion.ul layout className="flex gap-x-12">
@@ -34,13 +24,13 @@ const Navbar = () => {
           return (
             <li key={i} className="relative">
               <button
-                onClick={() => changeLink(i, link.href)}
+                onClick={() => changeLinkByIndex(i)}
                 style={{
                   color: isSelected(i) ? "#000000" : "rgba(0, 0, 0, 0.4)",
                   fontWeight: isSelected(i) ? "600" : "400",
                 }}
               >
-                {link.name}
+                {link.title}
               </button>
 
               {isSelected(i) && (
@@ -60,4 +50,5 @@ const Navbar = () => {
   );
 };
 
+export type { NavLinks };
 export default Navbar;

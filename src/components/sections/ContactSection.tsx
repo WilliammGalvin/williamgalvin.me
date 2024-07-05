@@ -1,11 +1,11 @@
 import ContactCard from "@/components/ContactCard";
-import PageWrapper from "@/components/PageWrapper";
+import SectionWrapper from "@/components/SectionWrapper";
 import { FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 
-export default function ContactPage() {
+const ContactSection = () => {
   return (
-    <PageWrapper
+    <SectionWrapper
       title={{
         header: "Get in touch",
         description:
@@ -31,6 +31,8 @@ export default function ContactPage() {
           </ContactCard>
         </div>
       </div>
-    </PageWrapper>
+    </SectionWrapper>
   );
-}
+};
+
+export default ContactSection;
