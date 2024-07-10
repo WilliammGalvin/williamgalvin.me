@@ -12,7 +12,18 @@ const HomeSection = ({
 }) => {
   return (
     <SectionWrapper className="flex items-center justify-center gap-x-8">
-      <div className="absolute-center size-[600px] bg-white rounded-full z-0" />
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        className="absolute-center size-[600px] bg-white rounded-full z-0"
+      />
 
       <motion.div
         className="z-10"

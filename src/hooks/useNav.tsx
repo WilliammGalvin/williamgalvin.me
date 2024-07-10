@@ -4,17 +4,14 @@ import { useState } from "react";
 
 const useNav = (links: string[]) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [lastSelectedIndex, setLastSelectedIndex] = useState<number>(0);
 
-  // Returns previous link index
-  const changeLinkByIndex = (index: number): number => {
-    const preIndex = selectedIndex;
+  const changeLinkByIndex = (index: number) => {
+    setLastSelectedIndex(selectedIndex);
     setSelectedIndex(index);
-
-    return preIndex;
   };
 
-  // Returns previous link index
-  const changeLinkByTitle = (title: string): number => {
+  const changeLinkByTitle = (title: string) => {
     const titleIndex: number = links.findIndex(
       (link) => link.toLowerCase() === title.toLowerCase()
     );
@@ -24,14 +21,16 @@ const useNav = (links: string[]) => {
       return -1;
     }
 
-    const preIndex = selectedIndex;
+    setLastSelectedIndex(selectedIndex);
     setSelectedIndex(titleIndex);
-
-    return preIndex;
   };
 
   const getCurrentLinkIndex = (): number => {
     return selectedIndex;
+  };
+
+  const getLastSelectedIndex = (): number => {
+    return lastSelectedIndex;
   };
 
   const isSelected = (index: number): boolean => {
@@ -42,6 +41,7 @@ const useNav = (links: string[]) => {
     changeLinkByIndex,
     changeLinkByTitle,
     getCurrentLinkIndex,
+    getLastSelectedIndex,
     isSelected,
   };
 };

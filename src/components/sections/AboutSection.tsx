@@ -36,7 +36,7 @@ const AboutSection = () => {
       }}
       className="flex flex-col items-center"
     >
-      <div className="w-5/6 mb-12">
+      <div className="w-5/6">
         <div className="grid grid-cols-2 grid-rows-2 gap-4">
           <AboutDiv title="Coding experience">
             I started coding in 2017, almost 7 years ago. I spent the first 4

@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const SectionWrapper = ({
   children,
   className,
@@ -15,30 +11,14 @@ const SectionWrapper = ({
 }) => {
   return (
     <div
-      className={`relative flex-1 w-full h-full ${className} ${
-        footerSpacing ? "mb-12" : ""
-      }`}
+      className={`relative flex-1 ${className} ${footerSpacing ? "mb-12" : ""}`}
     >
       {title && (
-        <motion.div
-          className="text-center mt-12 mb-16 space-y-6 flex flex-col items-center"
-          initial={{
-            opacity: 0,
-            y: -6,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.5,
-            ease: "easeInOut",
-          }}
-        >
+        <div className="text-center mt-12 mb-16 space-y-6 flex flex-col items-center">
           <h2 className="font-semibold text-3xl">{title.header}</h2>
 
           <p className="text-neutral-600 max-w-[550px]">{title.description}</p>
-        </motion.div>
+        </div>
       )}
 
       {children}
