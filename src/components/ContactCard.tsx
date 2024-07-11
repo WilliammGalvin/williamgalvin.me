@@ -15,7 +15,7 @@ const ContactCard = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div className="relative">
+    <div className="relative mx-8">
       <div className="absolute inset-0 bg-neutral-200 z-0" />
 
       <motion.div

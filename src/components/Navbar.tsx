@@ -147,7 +147,7 @@ const MobileNavOptions = ({
   return (
     <>
       <button onClick={toggleDropdown}>
-        <FiMenu />
+        <FiMenu className="text-xl" />
       </button>
 
       <motion.ul
