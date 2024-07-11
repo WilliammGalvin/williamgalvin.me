@@ -35,8 +35,8 @@ const ProjectsSection = () => {
       }}
     >
       {projects ? (
-        <div className="flex items-center justify-center">
-          <ul className="grid grid-cols-2 gap-4">
+        <div className="flex items-center justify-center pb-12">
+          <ul className="grid grid-flow-row sm:grid-cols-2 gap-4 mx-8">
             {projects.map((proj, i) => {
               return (
                 <li key={i}>

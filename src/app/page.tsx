@@ -6,6 +6,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import HomeSection from "@/components/sections/HomeSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import useNav from "@/hooks/useNav";
+import useScreen from "@/hooks/useScreen";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -19,8 +20,10 @@ export default function Home() {
     changeLinkByTitle,
   } = useNav(linkTitles);
 
+  const { hasWindowSizeInitalized, isMobile } = useScreen(800);
+
   const linkComponents: React.ReactNode[] = [
-    <HomeSection {...{ changeLinkByTitle }} />,
+    <HomeSection {...{ changeLinkByTitle, isMobile }} />,
     <AboutSection />,
     <ProjectsSection />,
     <ContactSection />,
@@ -39,30 +42,37 @@ export default function Home() {
   };
 
   return (
-    <section className="min-h-screen h-full bg-neutral-50 flex flex-col overflow-hidden">
-      <Navbar links={getNavLinks()} {...{ isSelected, changeLinkByIndex }} />
+    hasWindowSizeInitalized() && (
+      <main className="min-h-screen text-sm sm:text-base h-full bg-neutral-50 flex flex-col">
+        <Navbar
+          links={getNavLinks()}
+          {...{ isSelected, isMobile, changeLinkByIndex }}
+        />
 
-      <motion.ul
-        className="flex-1 grid grid-flow-col"
-        animate={{
-          transform: `translateX(-${getCurrentLinkIndex() * 100}vw)`,
-        }}
-        transition={{
-          duration: getSectionAnimationDuration(),
-          ease: "circInOut",
-        }}
-      >
-        {linkComponents.map((comp, i) => {
-          return (
-            <li
-              key={i}
-              className="flex w-[100vw] max-w-[100vw] h-full overflow-hidden"
-            >
-              {comp}
-            </li>
-          );
-        })}
-      </motion.ul>
-    </section>
+        <div className="flex-1 relative overflow-x-hidden">
+          <motion.ul
+            className="absolute inset-0 max-h-full grid grid-flow-col"
+            animate={{
+              transform: `translateX(-${getCurrentLinkIndex() * 100}vw)`,
+            }}
+            transition={{
+              duration: getSectionAnimationDuration(),
+              ease: "circInOut",
+            }}
+          >
+            {linkComponents.map((comp, i) => {
+              return (
+                <li
+                  key={i}
+                  className="flex w-screen max-w-screen h-full overflow-y-scroll overflow-x-hidden"
+                >
+                  {comp}
+                </li>
+              );
+            })}
+          </motion.ul>
+        </div>
+      </main>
+    )
   );
 }

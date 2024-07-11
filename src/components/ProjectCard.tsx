@@ -24,7 +24,7 @@ const ProjectCard = ({
       </div>
 
       <div>
-        <ul className="flex gap-x-2 mb-5">
+        <ul className="flex flex-wrap gap-2 mb-5">
           {props.tags.map((tag, i) => {
             return (
               <li
@@ -38,14 +38,14 @@ const ProjectCard = ({
         </ul>
 
         <div>
-          {props.url && <Button href={props.url}>View Link</Button>}
+          {props.url && <LinkButton href={props.url}>View Link</LinkButton>}
           {props.githubUrl && (
-            <Button href={props.githubUrl}>
+            <LinkButton href={props.githubUrl}>
               <div className="flex items-center gap-x-3">
                 <FaGithub />
                 GitHub
               </div>
-            </Button>
+            </LinkButton>
           )}
         </div>
       </div>
@@ -53,7 +53,7 @@ const ProjectCard = ({
   );
 };
 
-const Button = ({
+const LinkButton = ({
   href,
   children,
 }: {
@@ -75,7 +75,8 @@ const Button = ({
         });
       }}
       href={href}
-      className="border-2 border-black border-spacing-2 inline-flex text-base rounded-xl pl-8 pr-4 py-1 items-center gap-x-6"
+      target="_blank"
+      className="border-2 border-black border-spacing-2 inline-flex text-sm sm:text-base rounded-xl pl-8 pr-4 py-1 items-center gap-x-6"
     >
       {children}
 

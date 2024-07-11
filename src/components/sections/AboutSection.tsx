@@ -19,10 +19,10 @@ const AboutSection = () => {
     {
       title: "Other languages",
       technologies: [
-        { text: "Java", icon: <FaJava /> },
-        { text: "C#", icon: <SiCsharp /> },
-        { text: "Python", icon: <FaPython /> },
-        { text: "C", icon: <SiC /> },
+        { text: "Java (5 years)", icon: <FaJava /> },
+        { text: "C# (3 years)", icon: <SiCsharp /> },
+        { text: "Python (2 years)", icon: <FaPython /> },
+        { text: "C (1 year)", icon: <SiC /> },
       ],
     },
   ];
@@ -36,25 +36,25 @@ const AboutSection = () => {
       }}
       className="flex flex-col items-center"
     >
-      <div className="w-5/6">
-        <div className="grid grid-cols-2 grid-rows-2 gap-4">
+      <div className="w-5/6 pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 grid-flow-row sm:grid-rows-2 gap-4">
           <AboutDiv title="Coding experience">
             I started coding in 2017, almost 7 years ago. I spent the first 4
             years soley teaching myself Java. Eventually, I moved onto other
             languages such as C, C#, Python, and finally Typescript. I&apos;ve
-            been doing full-stack web development for just over 2 years now.
+            been doing full-stack web development for over 2 years now.
           </AboutDiv>
 
-          <AboutDiv title="Education" className="row-start-2 col-start-1">
+          <AboutDiv title="Education" className="sm:row-start-2 sm:col-start-1">
             I am currently pursuing an Honours Bachelor of Computer Science at
             Sheridan College. Expected to graduate in 2027.
           </AboutDiv>
 
           <AboutDiv
             title="Technologies"
-            className="row-span-2 col-start-2 items-center"
+            className="sm:row-span-2 sm:col-start-2 items-center"
           >
-            <div className="space-y-14">
+            <div className="space-y-10 md:space-y-16">
               {technologies.map((category, i) => {
                 return (
                   <div key={i}>
@@ -93,10 +93,10 @@ const AboutDiv = ({
 }) => {
   return (
     <div
-      className={`inline-flex flex-col p-6 border-2 border-black bg-white text-center ${className}`}
+      className={`inline-flex flex-col items-center p-6 border-2 border-black bg-white text-center ${className}`}
     >
       <span className="font-semibold mb-2">{title}</span>
-      <div className="max-w-[550px]">{children}</div>
+      <div className="max-w-[300px] sm:max-w-[550px]">{children}</div>
     </div>
   );
 };
