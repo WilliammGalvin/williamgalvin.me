@@ -86,7 +86,7 @@ const HomeSection = ({
 const MobileFooterNote = () => {
   return (
     <div
-      className="absolute left-1/2 -translate-x-1/2 -translate-y-full bg-white border border-black py-1 px-6 text-xs rounded-full"
+      className="absolute left-1/2 -translate-x-1/2 -translate-y-full bg-white border border-black py-1 px-6 text-xs rounded-full whitespace-nowrap"
       style={{
         top: "calc(100% - 15px)",
       }}
