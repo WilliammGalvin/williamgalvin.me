@@ -78,7 +78,7 @@ const HomeSection = ({
         )}
       </div>
 
-      <MobileFooterNote />
+      {isMobile() && <MobileFooterNote />}
     </SectionWrapper>
   );
 };
