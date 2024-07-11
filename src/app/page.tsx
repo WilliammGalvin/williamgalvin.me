@@ -23,10 +23,10 @@ export default function Home() {
   const { hasWindowSizeInitalized, isMobile } = useScreen(800);
 
   const linkComponents: React.ReactNode[] = [
-    <HomeSection {...{ changeLinkByTitle, isMobile }} />,
-    <AboutSection />,
-    <ProjectsSection />,
-    <ContactSection />,
+    <HomeSection key="home" {...{ changeLinkByTitle, isMobile }} />,
+    <AboutSection key="about" />,
+    <ProjectsSection key="projects" />,
+    <ContactSection key="contact" />,
   ];
 
   const getNavLinks = (): NavLinks => {
