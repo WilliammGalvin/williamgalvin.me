@@ -3,6 +3,7 @@
 import Navbar, { NavLinks } from "@/components/Navbar";
 import AboutSection from "@/components/sections/AboutSection";
 import ContactSection from "@/components/sections/ContactSection";
+import ExtrasSection from "@/components/sections/ExtrasSection";
 import HomeSection from "@/components/sections/HomeSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import useNav from "@/hooks/useNav";
@@ -10,7 +11,13 @@ import useScreen from "@/hooks/useScreen";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const linkTitles: string[] = ["Home", "About", "Projects", "Contact"];
+  const linkTitles: string[] = [
+    "Home",
+    "About",
+    "Extras",
+    "Projects",
+    "Contact",
+  ];
 
   const {
     isSelected,
@@ -25,6 +32,7 @@ export default function Home() {
   const linkComponents: React.ReactNode[] = [
     <HomeSection key="home" {...{ changeLinkByTitle, isMobile }} />,
     <AboutSection key="about" />,
+    <ExtrasSection key="extras" />,
     <ProjectsSection key="projects" />,
     <ContactSection key="contact" />,
   ];

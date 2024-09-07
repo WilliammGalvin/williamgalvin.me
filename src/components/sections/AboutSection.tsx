@@ -93,7 +93,7 @@ const AboutDiv = ({
 }) => {
   return (
     <div
-      className={`inline-flex flex-col items-center p-6 border-2 border-black bg-white text-center ${className}`}
+      className={`inline-flex flex-col items-center p-6 border-2 border-black bg-white ${className}`}
     >
       <span className="font-semibold mb-2">{title}</span>
       <div className="max-w-[300px] sm:max-w-[550px]">{children}</div>

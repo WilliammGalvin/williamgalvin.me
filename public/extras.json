@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Ontario Business Grant",
+    "description": "Applied for and won an Ontario grant to start my own business. The grant was used to start a coding school where I introduced and taught elementary aged children to program. Having been recently added to the curriculum, it was also used support students accademically. I am proud to have inspired multiple to pick up a passion for it outside of their current education."
+  },
+  {
+    "title": "President of Coding Club",
+    "description": "Started a coding club at my highschool to teach students how to program. The club was a success and had a large number of students join. I taught the students how to program in Python. Many of the students were later inspired to enter the Waterloo CCC which I mentored. Together, we entered the junior division and everyone had an amazing experience."
+  },
+  {
+    "title": "Automotive Management System",
+    "description": "In my Grade 12 Computer Science class, I was tasked with creating a program to help track the automotive departments inventory as well as a CRM. I graduated before it was put into production but the software laid the ground for another student to pick it up. The software was written in Java and used a MySQL database. Was given a 99% final grade for my work."
+  }
+]
