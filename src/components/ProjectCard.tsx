@@ -9,6 +9,7 @@ import useScreen from "@/hooks/useScreen";
 
 const projectCategories: { tag: string; title: string; hex: string }[] = [
   { tag: "web", title: "Web Development", hex: "#bddeff" },
+  { tag: "mobile", title: "Mobile Application", hex: "#ffcb99" },
 ];
 
 const ProjectCard = ({ props }: { props: ProjectData }) => {

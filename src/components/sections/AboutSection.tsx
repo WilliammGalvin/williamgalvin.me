@@ -1,6 +1,6 @@
 import { FaJava, FaPython, FaReact } from "react-icons/fa";
 import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiC, SiCsharp } from "react-icons/si";
+import { SiC, SiCsharp, SiDart } from "react-icons/si";
 import SectionWrapper from "../SectionWrapper";
 
 const AboutSection = () => {
@@ -22,7 +22,7 @@ const AboutSection = () => {
         { text: "Java (5 years)", icon: <FaJava /> },
         { text: "C# (3 years)", icon: <SiCsharp /> },
         { text: "Python (2 years)", icon: <FaPython /> },
-        { text: "C (1 year)", icon: <SiC /> },
+        { text: "Dart (1 year)", icon: <SiDart /> },
       ],
     },
   ];

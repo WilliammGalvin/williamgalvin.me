@@ -40,7 +40,7 @@ const ProjectsSection = () => {
       title={{
         header: "What I've made",
         description:
-          "Below is a list of projects that display all of the relevant technologies I have mastered.",
+          "Below is a list of projects that I have made within the last year to showcase my skills. They are all built off of problems that I have experienced and are my unique solutions to them.",
       }}
     >
       {projects ? (

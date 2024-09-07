@@ -7,24 +7,24 @@
     "category": "web"
   },
   {
-    "title": "map-loader",
-    "description": "A template to dynamically fetch and load tiles for a 2D game. A system designed for customizability and flexability.",
-    "githubUrl": "https://github.com/WilliammGalvin/map-loader",
-    "tags": ["Typescript", "p5.js"],
-    "category": "web"
-  },
-  {
-    "title": "store-app",
-    "description": "A demo store app that fetches product information from fakestoreapi.com and displays it in a clean and visually appealing way.",
-    "githubUrl": "https://github.com/WilliammGalvin/store-app",
-    "tags": ["React", "React-router", "Typescript", "TailwindCSS"],
+    "title": "SAAS Template",
+    "description": "The base template to all my SAAS projects. A clean, fast, reliable, and secure boilerplate for any online software product. Handles everything from basic UI to user authentication and database queries.",
+    "githubUrl": "https://github.com/WilliammGalvin/saas-template-readme/",
+    "tags": ["React", "NextJS", "Typescript", "Framer-motion", "TailwindCSS"],
     "category": "web"
   },
   {
     "title": "M.E.K Breakfast House",
-    "description": "A production website for a local breakfast restaurant. ** Github is private for business privacy **",
+    "description": "A production website for a local breakfast restaurant. Designed and built on request after the satisfaction of a previous website I made for their other restaurant. ** Source code not provided for privacy reasons **",
     "url": "https://www.mekbreakfast.ca",
     "tags": ["React", "NextJS", "Framer-motion", "Typescript", "TailwindCSS"],
     "category": "web"
+  },
+  {
+    "title": "Diction",
+    "description": "A mobile application to find the definition of words and save them for future use. Inspired by reading philisophical texts and running into words I didn't know but would be useful to learn.",
+    "githubUrl": "https://github.com/WilliammGalvin/diction",
+    "tags": ["Flutter", "Dart"],
+    "category": "mobile"
   }
 ]
