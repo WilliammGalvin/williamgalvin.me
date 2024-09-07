@@ -5,6 +5,11 @@ import { FaGithub } from "react-icons/fa";
 import { motion, useAnimate } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import { ProjectData } from "./sections/ProjectsSection";
+import useScreen from "@/hooks/useScreen";
+
+const projectCategories: { tag: string; title: string; hex: string }[] = [
+  { tag: "web", title: "Web Development", hex: "#bddeff" },
+];
 
 const ProjectCard = ({ props }: { props: ProjectData }) => {
   // No hyperlink to README.md
@@ -18,13 +23,27 @@ const ProjectCard = ({ props }: { props: ProjectData }) => {
 };
 
 const ProjectCardContent = ({ props }: { props: ProjectData }) => {
+  const { isMobile } = useScreen(375);
+  const category = projectCategories.find((c) => c.tag === props.category);
+
   return (
     <motion.div
-      className="flex flex-col justify-between border-2 border-black bg-white p-6 h-full"
+      className="relative flex flex-col justify-between border-2 border-black bg-white p-6 h-full"
       whileHover={{
         borderRadius: props.githubUrl ? "12px" : "0px",
       }}
     >
+      {category && !isMobile() && (
+        <div
+          className="absolute border-2 border-black left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 px-3 py-[2px] text-xs rounded-full"
+          style={{
+            backgroundColor: category.hex,
+          }}
+        >
+          {category.title}
+        </div>
+      )}
+
       <div className="mb-12">
         <span className="font-semibold mb-2">{props.title}</span>
         <p className="text-neutral-700 max-w-[550px]">{props.description}</p>

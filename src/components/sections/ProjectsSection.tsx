@@ -15,6 +15,7 @@ export type ProjectData = {
   url?: string;
   githubUrl?: string;
   tags: string[];
+  category: string;
 };
 
 const indieFlower = Indie_Flower({ weight: "400", subsets: ["latin"] });
@@ -48,7 +49,7 @@ const ProjectsSection = () => {
             isMobile() ? "mt-[125px]" : ""
           } relative flex items-center justify-center pb-12`}
         >
-          <ul className="relative grid grid-flow-row sm:grid-cols-2 gap-4 mx-8">
+          <ul className="relative grid grid-flow-row sm:grid-cols-2 gap-x-4 gap-y-7 mx-8">
             {projects.map((proj, i) => {
               return (
                 <li key={i}>
