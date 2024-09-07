@@ -20,7 +20,7 @@ const useScreen = (mobileMaxSize?: number) => {
   };
 
   const isMobile = (): boolean => {
-    assert(hasWindowSizeInitalized(), "windowWidth has yet to be initalized.");
+    if (!hasWindowSizeInitalized()) return false;
     return windowWidth! <= (mobileMaxSize ?? 550);
   };
 
