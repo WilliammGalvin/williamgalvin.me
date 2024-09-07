@@ -13,7 +13,7 @@ const ContactSection = () => {
       }}
     >
       <div className="flex flex-col items-center">
-        <div className="space-y-6 w-full max-w-[500px] mx-8">
+        <div className="space-y-6 w-full max-w-[500px]">
           <ContactCard
             title="Email"
             icon={<FiMail />}

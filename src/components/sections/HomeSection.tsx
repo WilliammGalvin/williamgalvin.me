@@ -44,14 +44,14 @@ const HomeSection = ({
           }}
         >
           <h2 className="text-5xl sm:text-6xl font-semibold leading-[1.25]">
-            Frontend
+            Software
             <br />
             Developer.
           </h2>
 
           <p className="my-12 text-base max-w-[300px] sm:max-w-[450px]">
-            Hi, I&apos;m William, a passionate front-end developer. Dedicated to
-            mastering and innoving the web.
+            Hi, I&apos;m William, a passionate software developer. Currently
+            dedicated to mastering and innoving the web.
           </p>
 
           <ProjectButton goToProject={() => changeLinkByTitle("projects")} />

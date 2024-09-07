@@ -25,6 +25,7 @@ const ContactCard = ({
       >
         <Link
           href={href}
+          target="_blank"
           className="relative flex items-center gap-x-5 border-2 border-black w-full px-6 py-4 z-10 bg-white"
         >
           <span className="text-3xl">{icon}</span>

@@ -1,15 +1,9 @@
 [
   {
-    "title": "M.E.K Breakfast House",
-    "description": "A production website for a local breakfast restaurant.",
-    "url": "https://www.mekbreakfast.ca",
+    "title": "williamgalvin.me",
+    "description": "The portfolio website you're viewing right now!",
+    "githubUrl": "https://github.com/WilliammGalvin/williamgalvin.me",
     "tags": ["React", "NextJS", "Framer-motion", "Typescript", "TailwindCSS"]
-  },
-  {
-    "title": "store-app",
-    "description": "A demo store app that fetches product information from fakestoreapi.com and displays it in a clean and visually appealing way.",
-    "githubUrl": "https://github.com/WilliammGalvin/store-app",
-    "tags": ["React", "React-router", "Typescript", "TailwindCSS"]
   },
   {
     "title": "map-loader",
@@ -18,9 +12,15 @@
     "tags": ["Typescript", "p5.js"]
   },
   {
-    "title": "williamgalvin.me",
-    "description": "The portfolio website you're viewing right now!",
-    "githubUrl": "https://github.com/WilliammGalvin/williamgalvin.me",
+    "title": "store-app",
+    "description": "A demo store app that fetches product information from fakestoreapi.com and displays it in a clean and visually appealing way.",
+    "githubUrl": "https://github.com/WilliammGalvin/store-app",
+    "tags": ["React", "React-router", "Typescript", "TailwindCSS"]
+  },
+  {
+    "title": "M.E.K Breakfast House",
+    "description": "A production website for a local breakfast restaurant. ** Github is private for business privacy **",
+    "url": "https://www.mekbreakfast.ca",
     "tags": ["React", "NextJS", "Framer-motion", "Typescript", "TailwindCSS"]
   }
 ]
