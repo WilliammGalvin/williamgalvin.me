@@ -32,7 +32,7 @@ const AboutSection = () => {
       title={{
         header: "All about me",
         description:
-          "A quick description of my coding beginnings, my current education, and the technologies I have learnt throughout the many years.",
+          "A quick description of my coding beginnings, my current education, and the technologies I have learned throughout the many years.",
       }}
       className="flex flex-col items-center"
     >
@@ -40,9 +40,9 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 grid-flow-row sm:grid-rows-2 gap-4">
           <AboutDiv title="Coding experience">
             I started coding in 2017, almost 7 years ago. I spent the first 4
-            years soley teaching myself Java. Eventually, I moved onto other
-            languages such as C, C#, Python, and finally Typescript. I&apos;ve
-            been doing full-stack web development for over 2 years now.
+            years solely teaching myself Java. Eventually, I moved to other
+            languages such as C, C#, Python, and Typescript. I&apos;ve been
+            doing full-stack web development for over 2 years now.
           </AboutDiv>
 
           <AboutDiv title="Education" className="sm:row-start-2 sm:col-start-1">
