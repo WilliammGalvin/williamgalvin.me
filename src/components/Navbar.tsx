@@ -46,7 +46,7 @@ const Navbar = ({
         }}
       />
 
-      <nav className="relative w-full flex justify-between px-8 p-6 bg-white z-20">
+      <nav className="sticky top-0 left-0 w-full flex justify-between px-8 p-6 bg-white z-20">
         <button onClick={() => changeLinkByIndex(0)}>William Galvin</button>
 
         {isMobile() ? (

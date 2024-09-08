@@ -32,7 +32,7 @@ const ExtrasSection = () => {
       className="flex flex-col items-center"
     >
       {projects ? (
-        <ul className="flex flex-col gap-y-5 items-center pb-12">
+        <ul className="flex flex-col gap-y-5 items-center pb-12 w-5/6">
           {projects.map((project, i) => (
             <li key={i} className="border-2 border-black bg-white p-4">
               <h3 className="font-semibold mb-4">{project.title}</h3>
