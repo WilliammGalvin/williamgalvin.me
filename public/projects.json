@@ -7,11 +7,18 @@
     "category": "web"
   },
   {
-    "title": "SAAS Template",
-    "description": "The base template to all my SAAS projects. A clean, fast, reliable, and secure boilerplate for any online software product. Handles everything from basic UI to user authentication and database queries.",
-    "githubUrl": "https://github.com/WilliammGalvin/saas-template-readme/",
-    "tags": ["React", "NextJS", "Typescript", "Framer-motion", "TailwindCSS"],
-    "category": "web"
+    "title": "Diction",
+    "description": "A mobile application to find the definition of words and save them for future use. Inspired by reading philisophical texts and running into words I didn't know but would be useful to learn.",
+    "githubUrl": "https://github.com/WilliammGalvin/diction",
+    "tags": ["Flutter", "Dart"],
+    "category": "mobile"
+  },
+  {
+    "title": "ImBored",
+    "description": "A hub for classic game remakes. Slowly adding more and more games to the collection. Currently only has a remake of the classic game 'Snake' and 'Frogger'.",
+    "githubUrl": "https://github.com/WilliammGalvin/ImBored/",
+    "tags": ["C++", "SFML"],
+    "category": "c-plus-plus"
   },
   {
     "title": "M.E.K Breakfast House",
@@ -19,12 +26,5 @@
     "url": "https://www.mekbreakfast.ca",
     "tags": ["React", "NextJS", "Framer-motion", "Typescript", "TailwindCSS"],
     "category": "web"
-  },
-  {
-    "title": "Diction",
-    "description": "A mobile application to find the definition of words and save them for future use. Inspired by reading philisophical texts and running into words I didn't know but would be useful to learn.",
-    "githubUrl": "https://github.com/WilliammGalvin/diction",
-    "tags": ["Flutter", "Dart"],
-    "category": "mobile"
   }
 ]

@@ -1,7 +1,8 @@
 import { FaJava, FaPython, FaReact } from "react-icons/fa";
 import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiC, SiCsharp, SiDart } from "react-icons/si";
+import { SiC, SiCplusplus, SiCsharp, SiDart } from "react-icons/si";
 import SectionWrapper from "../SectionWrapper";
+import { BiLogoCPlusPlus } from "react-icons/bi";
 
 const AboutSection = () => {
   const technologies: {
@@ -9,7 +10,7 @@ const AboutSection = () => {
     technologies: { text: string; icon: React.ReactNode }[];
   }[] = [
     {
-      title: "Web techstack (2 years)",
+      title: "Web techstack",
       technologies: [
         { text: "React, NextJS", icon: <FaReact /> },
         { text: "Typescript, Javascript", icon: <RiJavascriptFill /> },
@@ -19,10 +20,8 @@ const AboutSection = () => {
     {
       title: "Other languages",
       technologies: [
-        { text: "Java (5 years)", icon: <FaJava /> },
-        { text: "C# (3 years)", icon: <SiCsharp /> },
-        { text: "Python (2 years)", icon: <FaPython /> },
-        { text: "Dart (1 year)", icon: <SiDart /> },
+        { text: "Java", icon: <FaJava /> },
+        { text: "C++", icon: <BiLogoCPlusPlus /> },
       ],
     },
   ];
@@ -39,15 +38,14 @@ const AboutSection = () => {
       <div className="w-5/6 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 grid-flow-row sm:grid-rows-2 gap-4">
           <AboutDiv title="Coding experience">
-            I started coding in 2017, almost 7 years ago. I spent the first 4
-            years solely teaching myself Java. Eventually, I moved to other
-            languages such as C, C#, Python, and Typescript. I&apos;ve been
-            doing full-stack web development for over 2 years now.
+            I started coding in 2017, where I started developing a passion for
+            the field of Computer Science. Recently, I&apos;ve been focusing on
+            web development and low-level development.
           </AboutDiv>
 
           <AboutDiv title="Education" className="sm:row-start-2 sm:col-start-1">
             I am currently pursuing an Honours Bachelor of Computer Science at
-            Sheridan College. Expected to graduate in 2027.
+            Sheridan College. Expected to graduate in 2028.
           </AboutDiv>
 
           <AboutDiv
