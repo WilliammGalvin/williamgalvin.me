@@ -14,17 +14,31 @@
     "category": "mobile"
   },
   {
-    "title": "ImBored",
-    "description": "A hub for classic game remakes. Slowly adding more and more games to the collection. Currently only has a remake of the classic game 'Snake' and 'Frogger'.",
-    "githubUrl": "https://github.com/WilliammGalvin/ImBored/",
-    "tags": ["C++", "SFML"],
-    "category": "c-plus-plus"
-  },
-  {
     "title": "M.E.K Breakfast House",
     "description": "A production website for a local breakfast restaurant. Designed and built on request after the satisfaction of a previous website I made for their other restaurant. ** Source code not provided for privacy reasons **",
     "url": "https://www.mekbreakfast.ca",
     "tags": ["React", "NextJS", "Framer-motion", "Typescript", "TailwindCSS"],
     "category": "web"
+  },
+  {
+    "title": "Chip-8 Emulator",
+    "description": "A Chip-8 emulator completed with a debugging information UI.",
+    "githubUrl": "https://github.com/WilliammGalvin/Chip8_Emulator",
+    "tags": ["C++", "SFML"],
+    "category": "c-plus-plus"
+  },
+  {
+    "title": "Unwind",
+    "description": "A desktop app to help unwind after a long day. The app will give you a writing prompt from one of various categories.",
+    "githubUrl": "https://github.com/WilliammGalvin/Unwind",
+    "tags": ["ElectronJS", "React", "Typescript", "TailwindCSS"],
+    "category": "desktop"
+  },
+  {
+    "title": "ImBored",
+    "description": "A hub for classic game remakes. Slowly adding more and more games to the collection. Currently only has a remake of the classic game 'Snake' and 'Frogger'.",
+    "githubUrl": "https://github.com/WilliammGalvin/ImBored/",
+    "tags": ["C++", "SFML"],
+    "category": "c-plus-plus"
   }
 ]
