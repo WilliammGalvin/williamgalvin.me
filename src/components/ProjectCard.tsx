@@ -15,11 +15,10 @@ const projectCategories: { tag: string; title: string; hex: string }[] = [
 ];
 
 const ProjectCard = ({ props }: { props: ProjectData }) => {
-  // No hyperlink to README.md
   if (!props.githubUrl) return <ProjectCardContent props={props} />;
 
   return (
-    <Link href={props.githubUrl + "/blob/main/README.md"} target="_blank">
+    <Link href={props.githubUrl} target="_blank">
       <ProjectCardContent props={props} />
     </Link>
   );

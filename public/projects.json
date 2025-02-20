@@ -2,14 +2,14 @@
   {
     "title": "williamgalvin.me",
     "description": "The portfolio website you're viewing right now!",
-    "githubUrl": "https://github.com/WilliammGalvin/williamgalvin.me",
+    "githubUrl": "https://github.com/WilliammGalvin/williamgalvin.me/blob/main/README.md",
     "tags": ["React", "NextJS", "Framer-motion", "Typescript", "TailwindCSS"],
     "category": "web"
   },
   {
     "title": "Diction",
     "description": "A mobile application to find the definition of words and save them for future use. Inspired by reading philisophical texts and running into words I didn't know but would be useful to learn.",
-    "githubUrl": "https://github.com/WilliammGalvin/diction",
+    "githubUrl": "https://github.com/WilliammGalvin/diction/blob/main/README.md",
     "tags": ["Flutter", "Dart"],
     "category": "mobile"
   },
@@ -23,21 +23,21 @@
   {
     "title": "Chip-8 Emulator",
     "description": "A Chip-8 emulator completed with a debugging information UI.",
-    "githubUrl": "https://github.com/WilliammGalvin/Chip8_Emulator",
+    "githubUrl": "https://github.com/WilliammGalvin/Chip8_Emulator/blob/master/README.md",
     "tags": ["C++", "SFML"],
     "category": "c-plus-plus"
   },
   {
     "title": "Unwind",
     "description": "A desktop app to help unwind after a long day. The app will give you a writing prompt from one of various categories.",
-    "githubUrl": "https://github.com/WilliammGalvin/Unwind",
+    "githubUrl": "https://github.com/WilliammGalvin/Unwind/blob/main/README.md",
     "tags": ["ElectronJS", "React", "Typescript", "TailwindCSS"],
     "category": "desktop"
   },
   {
     "title": "ImBored",
     "description": "A hub for classic game remakes. Slowly adding more and more games to the collection. Currently only has a remake of the classic game 'Snake' and 'Frogger'.",
-    "githubUrl": "https://github.com/WilliammGalvin/ImBored/",
+    "githubUrl": "https://github.com/WilliammGalvin/ImBored/blob/main/README.md",
     "tags": ["C++", "SFML"],
     "category": "c-plus-plus"
   }
