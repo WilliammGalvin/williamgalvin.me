@@ -2,6 +2,7 @@
 
 import Navbar, { NavLinks } from "@/components/Navbar";
 import AboutSection from "@/components/sections/AboutSection";
+import ArticlesSection from "@/components/sections/ArticlesSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ExtrasSection from "@/components/sections/ExtrasSection";
 import HomeSection from "@/components/sections/HomeSection";
@@ -15,6 +16,7 @@ export default function Home() {
     "Home",
     "About",
     "Extras",
+    "Articles",
     "Projects",
     "Contact",
   ];
@@ -33,6 +35,7 @@ export default function Home() {
     <HomeSection key="home" {...{ changeLinkByTitle, isMobile }} />,
     <AboutSection key="about" />,
     <ExtrasSection key="extras" />,
+    <ArticlesSection key="articles" />,
     <ProjectsSection key="projects" />,
     <ContactSection key="contact" />,
   ];
