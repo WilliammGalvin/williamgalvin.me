@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import { motion, useAnimate } from "framer-motion";
-import { FiArrowRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 import { ProjectData } from "./sections/ProjectsSection";
 import useScreen from "@/hooks/useScreen";
+import LinkButton from "./LinkButton";
 
 const projectCategories: { tag: string; title: string; hex: string }[] = [
   { tag: "web", title: "Web Development", hex: "#bddeff" },
@@ -15,16 +14,6 @@ const projectCategories: { tag: string; title: string; hex: string }[] = [
 ];
 
 const ProjectCard = ({ props }: { props: ProjectData }) => {
-  if (!props.githubUrl) return <ProjectCardContent props={props} />;
-
-  return (
-    <Link href={props.githubUrl} target="_blank">
-      <ProjectCardContent props={props} />
-    </Link>
-  );
-};
-
-const ProjectCardContent = ({ props }: { props: ProjectData }) => {
   const { isMobile } = useScreen(375);
   const category = projectCategories.find((c) => c.tag === props.category);
 
@@ -32,7 +21,7 @@ const ProjectCardContent = ({ props }: { props: ProjectData }) => {
     <motion.div
       className="relative flex flex-col justify-between border-2 border-black bg-white p-6 h-full"
       whileHover={{
-        borderRadius: props.githubUrl ? "12px" : "0px",
+        borderRadius: "12px",
       }}
     >
       {category && !isMobile() && (
@@ -77,40 +66,6 @@ const ProjectCardContent = ({ props }: { props: ProjectData }) => {
         )}
       </div>
     </motion.div>
-  );
-};
-
-const LinkButton = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => {
-  const [scope, animate] = useAnimate();
-
-  return (
-    <Link
-      onMouseEnter={(_) => {
-        animate(scope.current, {
-          marginLeft: ["0", "10px"],
-        });
-      }}
-      onMouseLeave={(_) => {
-        animate(scope.current, {
-          marginLeft: ["10px", "0"],
-        });
-      }}
-      href={href}
-      target="_blank"
-      className={`border-2 border-black border-spacing-2 inline-flex text-sm sm:text-base rounded-xl pl-8 pr-4 py-1 items-center gap-x-6`}
-    >
-      {children}
-
-      <motion.div ref={scope}>
-        <FiArrowRight />
-      </motion.div>
-    </Link>
   );
 };
 
