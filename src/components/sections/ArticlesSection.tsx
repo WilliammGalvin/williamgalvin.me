@@ -43,7 +43,9 @@ const ArticlesSection = () => {
     >
       {isMobile() ? (
         <div className="flex justify-center mb-6">
-          <AllArticleButtonContent />
+          <Link href="https://medium.com/@williammgalvin" target="_blank">
+            <AllArticleButtonContent />
+          </Link>
         </div>
       ) : (
         <Link
