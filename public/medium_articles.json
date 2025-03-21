@@ -1,8 +1,20 @@
 [
   {
     "title": "User Authentication / CRM From Scratch",
-    "description": "A theoretical analysis of user authentication and CRM systems.",
+    "description": "A theoretical guide to building out user authentication and CRM systems from scratch.",
     "read_time": 10,
     "link": "https://medium.com/@williammgalvin/user-authentication-crm-from-scratch-64dd40d6d441"
+  },
+  {
+    "title": "Dependency Injection with Custom Annotations in Java",
+    "description": "A guide to dependency injection using custom annotations in Java.",
+    "read_time": 7,
+    "link": "https://medium.com/@williammgalvin/dependency-injection-with-custom-annotations-in-java-b49477be5d58"
+  },
+  {
+    "title": "Why Computers Only Know Pseudorandomness",
+    "description": "Why computers aren't truly random and how to replicate random number generation.",
+    "read_time": 8,
+    "link": "https://medium.com/@williammgalvin/why-computers-only-know-pseudorandomness-990e9fc8a0fb"
   }
 ]

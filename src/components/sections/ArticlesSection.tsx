@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import SectionWrapper from "../SectionWrapper";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { BiBook } from "react-icons/bi";
 
 type Article = {
   title: string;
@@ -33,11 +34,27 @@ const ArticlesSection = () => {
   return (
     <SectionWrapper
       title={{
-        header: "Medium Articles",
+        header: "Medium articles",
         description:
-          "Below are articles I've written based upon deep dives into complex computer science topics.",
+          "Below are research articles that I've written about various computers science topics.",
       }}
     >
+      <Link
+        href="https://medium.com/@williammgalvin"
+        target="_blank"
+        className="absolute left-1/2 -translate-x-1/2 bottom-5"
+      >
+        <motion.div
+          className="inline-flex gap-x-2 items-center border-2 border-black bg-white rounded-lg px-6 py-2 shadow-lg"
+          whileHover={{
+            borderRadius: 0,
+          }}
+        >
+          <BiBook />
+          <span>View all articles</span>
+        </motion.div>
+      </Link>
+
       {articles == null || articleLoadErr ? (
         <div className="flex flex-1 justify-center items-center">
           <span className="text-neutral-400">
@@ -45,15 +62,17 @@ const ArticlesSection = () => {
           </span>
         </div>
       ) : (
-        <ul className="flex-1 mx-12 flex justify-center">
-          {articles.map((article, i) => {
-            return (
-              <li key={i}>
-                <ArticleBlock article={article} />
-              </li>
-            );
-          })}
-        </ul>
+        <div className="flex-1 flex justify-center px-12">
+          <ul className="grid grid-cols-2 gap-5">
+            {articles.map((article, i) => {
+              return (
+                <li key={i}>
+                  <ArticleBlock article={article} />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       )}
     </SectionWrapper>
   );
@@ -65,15 +84,22 @@ const ArticleBlock = ({ article }: { article: Article }) => {
   return (
     <Link href={link} target="_blank">
       <motion.div
-        className="p-4 border-2 border-black bg-white inline-flex flex-col"
+        className="relative p-4 border-2 border-black bg-white inline-flex flex-col gap-y-12 w-full h-full justify-between"
         whileHover={{
-          borderRadius: "12px",
+          borderRadius: "12px 0 12px 12px",
         }}
       >
-        <h3 className="font-bold">{title}</h3>
-        <span className="text-sm text-neutral-500 mb-4">
-          Read time: {read_time} minutes
+        <span className="absolute top-1 -translate-y-[70%] right-1 translate-x-3/4 text-xl">
+          📌
         </span>
+
+        <div>
+          <h3 className="font-bold max-w-[350px]">{title}</h3>
+          <span className="text-sm text-neutral-500 mb-4">
+            Read time: {read_time} minutes
+          </span>
+        </div>
+
         <p className="max-w-[350px] text-neutral-600">{description}</p>
       </motion.div>
     </Link>
