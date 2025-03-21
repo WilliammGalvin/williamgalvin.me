@@ -62,7 +62,7 @@ const ArticlesSection = () => {
           </span>
         </div>
       ) : (
-        <div className="flex-1 flex justify-center sm:px-12 px-6">
+        <div className="flex-1 flex justify-center sm:px-12 px-6 pb-12">
           <ul className="grid sm:grid-cols-2 grid-cols-1 gap-5">
             {articles.map((article, i) => {
               return (
