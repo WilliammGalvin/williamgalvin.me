@@ -5,6 +5,7 @@ import SectionWrapper from "../SectionWrapper";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { BiBook } from "react-icons/bi";
+import useScreen from "@/hooks/useScreen";
 
 type Article = {
   title: string;
@@ -16,6 +17,7 @@ type Article = {
 const ArticlesSection = () => {
   const [articles, setArticles] = useState<Article[] | null>(null);
   const [articleLoadErr, setArticleLoadErr] = useState<boolean>(false);
+  const { isMobile } = useScreen();
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -39,21 +41,19 @@ const ArticlesSection = () => {
           "Below are research articles that I've written about various computers science topics.",
       }}
     >
-      <Link
-        href="https://medium.com/@williammgalvin"
-        target="_blank"
-        className="absolute left-1/2 -translate-x-1/2 bottom-5"
-      >
-        <motion.div
-          className="inline-flex gap-x-2 items-center border-2 border-black bg-white rounded-lg px-6 py-2 shadow-lg"
-          whileHover={{
-            borderRadius: 0,
-          }}
+      {isMobile() ? (
+        <div className="flex justify-center mb-6">
+          <AllArticleButtonContent />
+        </div>
+      ) : (
+        <Link
+          href="https://medium.com/@williammgalvin"
+          target="_blank"
+          className="absolute left-1/2 -translate-x-1/2 bottom-5"
         >
-          <BiBook />
-          <span>View all articles</span>
-        </motion.div>
-      </Link>
+          <AllArticleButtonContent />
+        </Link>
+      )}
 
       {articles == null || articleLoadErr ? (
         <div className="flex flex-1 justify-center items-center">
@@ -62,8 +62,8 @@ const ArticlesSection = () => {
           </span>
         </div>
       ) : (
-        <div className="flex-1 flex justify-center px-12">
-          <ul className="grid grid-cols-2 gap-5">
+        <div className="flex-1 flex justify-center sm:px-12 px-6">
+          <ul className="grid sm:grid-cols-2 grid-cols-1 gap-5">
             {articles.map((article, i) => {
               return (
                 <li key={i}>
@@ -103,6 +103,20 @@ const ArticleBlock = ({ article }: { article: Article }) => {
         <p className="max-w-[350px] text-neutral-600">{description}</p>
       </motion.div>
     </Link>
+  );
+};
+
+const AllArticleButtonContent = () => {
+  return (
+    <motion.div
+      className="inline-flex gap-x-2 items-center border-2 border-black bg-white rounded-lg px-6 py-2 md:shadow-lg"
+      whileHover={{
+        borderRadius: 0,
+      }}
+    >
+      <BiBook />
+      <span>View all articles</span>
+    </motion.div>
   );
 };
 
