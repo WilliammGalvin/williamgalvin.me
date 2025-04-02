@@ -41,7 +41,7 @@ const ArticlesSection = () => {
           "Below are research articles that I've written about various computers science topics.",
       }}
     >
-      {isMobile() ? (
+      {!isMobile() ? (
         <div className="flex justify-center mb-6">
           <Link href="https://medium.com/@williammgalvin" target="_blank">
             <AllArticleButtonContent />
