@@ -10,6 +10,8 @@ const projectCategories: { tag: string; title: string; hex: string }[] = [
   { tag: "web", title: "Web Development", hex: "#bddeff" },
   { tag: "mobile", title: "Mobile Application", hex: "#ffcb99" },
   { tag: "c-plus-plus", title: "C++ Development", hex: "#a8c9a5" },
+  { tag: "c", title: "C Development", hex: "#ffe7b9" },
+  { tag: "rust", title: "Rust Development", hex: "#d7b4f3" },
   { tag: "desktop", title: "Desktop Application", hex: "#f1a7a3" },
 ];
 

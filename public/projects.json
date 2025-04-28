@@ -7,11 +7,11 @@
     "category": "web"
   },
   {
-    "title": "Diction",
-    "description": "A mobile application to find the definition of words and save them for future use. Inspired by reading philisophical texts and running into words I didn't know but would be useful to learn.",
-    "githubUrl": "https://github.com/WilliammGalvin/diction/blob/main/README.md",
-    "tags": ["Flutter", "Dart"],
-    "category": "mobile"
+    "title": "Regex NFA Engine",
+    "description": "A toy regex matcher using non-deterministic finite automaton.",
+    "githubUrl": "https://github.com/WilliammGalvin/RegexEngine/blob/master/README.md",
+    "tags": ["Rust"],
+    "category": "rust"
   },
   {
     "title": "M.E.K Breakfast House",
@@ -28,11 +28,25 @@
     "category": "c-plus-plus"
   },
   {
+    "title": "Memory Allocator",
+    "description": "A toy memory allocator and a simple testing script written in C.",
+    "githubUrl": "https://github.com/WilliammGalvin/MemoryAllocator/blob/main/README.md",
+    "tags": ["C"],
+    "category": "c"
+  },
+  {
     "title": "Unwind",
     "description": "A desktop app to help unwind after a long day. The app will give you a writing prompt from one of various categories.",
     "githubUrl": "https://github.com/WilliammGalvin/Unwind/blob/main/README.md",
     "tags": ["ElectronJS", "React", "Typescript", "TailwindCSS"],
     "category": "desktop"
+  },
+  {
+    "title": "Diction",
+    "description": "A mobile application to find the definition of words and save them for future use. Inspired by reading philisophical texts and running into words I didn't know but would be useful to learn.",
+    "githubUrl": "https://github.com/WilliammGalvin/diction/blob/main/README.md",
+    "tags": ["Flutter", "Dart"],
+    "category": "mobile"
   },
   {
     "title": "ImBored",
