@@ -21,6 +21,13 @@
     "category": "web"
   },
   {
+    "title": "Authentication Back-end",
+    "description": "An authentication back-end with JWT support and sessions.",
+    "githubUrl": "https://github.com/WilliammGalvin/auth-backend/blob/main/README.md",
+    "tags": ["Go"],
+    "category": "go"
+  },
+  {
     "title": "Chip-8 Emulator",
     "description": "A Chip-8 emulator completed with a debugging information UI.",
     "githubUrl": "https://github.com/WilliammGalvin/Chip8_Emulator/blob/master/README.md",

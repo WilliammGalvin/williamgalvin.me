@@ -13,6 +13,7 @@ const projectCategories: { tag: string; title: string; hex: string }[] = [
   { tag: "c", title: "C Development", hex: "#ffe7b9" },
   { tag: "rust", title: "Rust Development", hex: "#d7b4f3" },
   { tag: "desktop", title: "Desktop Application", hex: "#f1a7a3" },
+  { tag: "go", title: "Go Development", hex: "#b3e5fc" }, // light sky blue
 ];
 
 const ProjectCard = ({ props }: { props: ProjectData }) => {

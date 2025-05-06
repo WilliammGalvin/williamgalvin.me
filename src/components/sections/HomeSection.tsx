@@ -51,7 +51,8 @@ const HomeSection = ({
 
           <p className="my-12 text-base max-w-[300px] sm:max-w-[450px]">
             Hi, I&apos;m William, a passionate software developer. Currently
-            dedicated to innovating the web.
+            dedicated to low-level programming, data science, and machine
+            learning.
           </p>
 
           <ProjectButton goToProject={() => changeLinkByTitle("projects")} />

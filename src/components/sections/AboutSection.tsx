@@ -1,8 +1,8 @@
 import { FaJava, FaPython, FaReact } from "react-icons/fa";
 import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiC, SiCplusplus, SiCsharp, SiDart } from "react-icons/si";
 import SectionWrapper from "../SectionWrapper";
 import { BiLogoCPlusPlus } from "react-icons/bi";
+import { SiTypescript } from "react-icons/si";
 
 const AboutSection = () => {
   const technologies: {
@@ -10,18 +10,12 @@ const AboutSection = () => {
     technologies: { text: string; icon: React.ReactNode }[];
   }[] = [
     {
-      title: "Web techstack",
-      technologies: [
-        { text: "React, NextJS", icon: <FaReact /> },
-        { text: "Typescript, Javascript", icon: <RiJavascriptFill /> },
-        { text: "TailwindCSS", icon: <RiTailwindCssFill /> },
-      ],
-    },
-    {
-      title: "Other languages",
+      title: "Programming languages",
       technologies: [
         { text: "Java", icon: <FaJava /> },
         { text: "C++", icon: <BiLogoCPlusPlus /> },
+        { text: "Typescript", icon: <SiTypescript /> },
+        { text: "Python", icon: <FaPython /> },
       ],
     },
   ];
@@ -45,7 +39,7 @@ const AboutSection = () => {
 
           <AboutDiv title="Education" className="sm:row-start-2 sm:col-start-1">
             I am currently pursuing an Honours Bachelor of Computer Science at
-            Sheridan College. Expected to graduate in 2028.
+            Sheridan College. Expected to graduate in 2027.
           </AboutDiv>
 
           <AboutDiv
