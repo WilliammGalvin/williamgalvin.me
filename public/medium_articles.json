@@ -1,5 +1,11 @@
 [
   {
+    "title": "Exploring the Foundation of Language Processing",
+    "description": "A hands-on deep dive into how computers turn raw text into meaning.",
+    "read_time": 16,
+    "link": "https://medium.com/@williammgalvin/exploring-the-foundation-of-language-processing-be2d4bc577c1"
+  },
+  {
     "title": "User Authentication / CRM From Scratch",
     "description": "A theoretical guide to building out user authentication and CRM systems from scratch.",
     "read_time": 10,
