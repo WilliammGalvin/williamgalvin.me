@@ -10,6 +10,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import useNav from "@/hooks/useNav";
 import useScreen from "@/hooks/useScreen";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   const linkTitles: string[] = [
@@ -54,7 +55,7 @@ export default function Home() {
 
   return (
     hasWindowSizeInitalized() && (
-      <main className="min-h-screen text-sm sm:text-base h-full bg-neutral-50 flex flex-col">
+      <main className="relative min-h-screen text-sm sm:text-base h-full bg-neutral-50 flex flex-col">
         <Navbar
           links={getNavLinks()}
           {...{ isSelected, isMobile, changeLinkByIndex }}

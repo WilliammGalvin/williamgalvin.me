@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ProjectButton from "../ProjectButton";
 import NameCube from "../NameCube";
 import SectionWrapper from "../SectionWrapper";
+import Link from "next/link";
 
 const HomeSection = ({
   changeLinkByTitle,
@@ -15,6 +16,15 @@ const HomeSection = ({
   return (
     <SectionWrapper className="flex justify-center gap-x-8">
       <div className="relative w-full flex justify-center items-center gap-x-8 text-center md:text-left">
+        {!isMobile() && (
+          <Link
+            href="https://cherry.williamgalvin.me/"
+            className="absolute right-6 bottom-6 px-6 py-2 rounded-lg bg-red-200 border-black border-2 hover:bg-red-300 ease-in-out duration-150"
+          >
+            🍒 Cherry Language
+          </Link>
+        )}
+
         <motion.div
           initial={{
             opacity: 0,
