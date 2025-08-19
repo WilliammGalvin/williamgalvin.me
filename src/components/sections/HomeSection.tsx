@@ -60,7 +60,7 @@ const HomeSection = ({
           </h2>
 
           <h3 className="mt-12 mb-1 font-semibold text-xl">
-            Hi, I'm William 👋
+            Hi, I&apos;m William 👋
           </h3>
 
           <p className="mb-12 text-base max-w-[300px] sm:max-w-[450px]">
