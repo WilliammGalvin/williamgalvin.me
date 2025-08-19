@@ -12,9 +12,9 @@ const AboutSection = () => {
     {
       title: "Programming languages",
       technologies: [
-        { text: "Java", icon: <FaJava /> },
         { text: "C++", icon: <BiLogoCPlusPlus /> },
         { text: "Typescript", icon: <SiTypescript /> },
+        { text: "Java", icon: <FaJava /> },
         { text: "Python", icon: <FaPython /> },
       ],
     },

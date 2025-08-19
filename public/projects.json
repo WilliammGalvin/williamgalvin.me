@@ -7,6 +7,20 @@
     "category": "web"
   },
   {
+    "title": "JRegex Engine",
+    "description": "a toy regex matcher using bytecode that's run on a custom lightweight VM.",
+    "githubUrl": "https://github.com/WilliammGalvin/JRegexEngine/blob/main/README.md",
+    "tags": ["Java"],
+    "category": "java"
+  },
+  {
+    "title": "Cherry Compiler",
+    "description": "a compiler for my own programming language. It includes a full pipeline with a hand-written lexer, recursive descent parser, and an LLVM backend.",
+    "githubUrl": "https://github.com/WilliammGalvin/Cherry/blob/master/README.md",
+    "tags": ["C++", "LLVM"],
+    "category": "c-plus-plus"
+  },
+  {
     "title": "Regex NFA Engine",
     "description": "A toy regex matcher using non-deterministic finite automaton.",
     "githubUrl": "https://github.com/WilliammGalvin/RegexEngine/blob/master/README.md",

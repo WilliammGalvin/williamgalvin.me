@@ -22,7 +22,7 @@ const ProjectButton = ({ goToProject }: { goToProject: () => void }) => {
       }}
     >
       <div
-        className="absolute left-0 top-1/2 bg-neutral-300 opacity-70 rounded-full size-12 z-0"
+        className="absolute left-0 top-1/2 bg-neutral-200 opacity-70 rounded-full size-12 z-0"
         style={{
           transform: "translateY(calc(-50% + 2px))",
         }}

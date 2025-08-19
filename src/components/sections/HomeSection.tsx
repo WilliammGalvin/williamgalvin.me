@@ -16,14 +16,14 @@ const HomeSection = ({
   return (
     <SectionWrapper className="flex justify-center gap-x-8">
       <div className="relative w-full flex justify-center items-center gap-x-8 text-center md:text-left">
-        {!isMobile() && (
+        {/* {!isMobile() && (
           <Link
             href="https://cherry.williamgalvin.me/"
             className="absolute right-6 bottom-6 px-6 py-2 rounded-lg bg-red-200 border-black border-2 hover:bg-red-300 ease-in-out duration-150"
           >
             🍒 Cherry Language
           </Link>
-        )}
+        )} */}
 
         <motion.div
           initial={{
@@ -59,10 +59,15 @@ const HomeSection = ({
             Developer.
           </h2>
 
-          <p className="my-12 text-base max-w-[300px] sm:max-w-[450px]">
-            Hi, I&apos;m William, a passionate software developer. Currently
-            dedicated to low-level programming, data science, and machine
-            learning.
+          <h3 className="mt-12 mb-1 font-semibold text-xl">
+            Hi, I'm William 👋
+          </h3>
+
+          <p className="mb-12 text-base max-w-[300px] sm:max-w-[450px]">
+            A passionate software developer. Currently dedicated to{" "}
+            <span className="font-semibold">compiler development</span> and
+            exploring the world of{" "}
+            <span className="font-semibold">programming languages</span>.
           </p>
 
           <ProjectButton goToProject={() => changeLinkByTitle("projects")} />
