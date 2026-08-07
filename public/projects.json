@@ -1,5 +1,61 @@
 [
   {
+    "title": "ull-benchmarking",
+    "description": "A low-latency benchmarking library built on RDTSC cycle timing and a policy-based ring buffer, with a binary serialization format and a web dashboard for analyzing results.",
+    "githubUrl": "https://github.com/WilliammGalvin/ull/blob/main/README.md",
+    "tags": ["C++", "Python", "FastAPI", "NextJS"],
+    "category": "c-plus-plus"
+  },
+  {
+    "title": "ull-messaging",
+    "description": "A messaging library with compile-time configurable transport and a zero-copy codec, tested over UDP loopback.",
+    "githubUrl": "https://github.com/WilliammGalvin/ull/blob/main/README.md",
+    "tags": ["C++"],
+    "category": "c-plus-plus"
+  },
+  {
+    "title": "Cherry Compiler",
+    "description": "A compiler for my own programming language. It includes a full pipeline with a hand-written lexer, recursive descent parser, and an LLVM backend.",
+    "githubUrl": "https://github.com/WilliammGalvin/Cherry/blob/master/README.md",
+    "tags": ["C++", "LLVM"],
+    "category": "c-plus-plus"
+  },
+  {
+    "title": "JRegex Engine",
+    "description": "A toy regex matcher that compiles patterns to bytecode and runs them on a custom lightweight VM.",
+    "githubUrl": "https://github.com/WilliammGalvin/JRegexEngine/blob/main/README.md",
+    "tags": ["Java"],
+    "category": "java"
+  },
+  {
+    "title": "Regex NFA Engine",
+    "description": "A toy regex matcher built on a non-deterministic finite automaton.",
+    "githubUrl": "https://github.com/WilliammGalvin/RegexEngine/blob/master/README.md",
+    "tags": ["Rust"],
+    "category": "rust"
+  },
+  {
+    "title": "Apollo",
+    "description": "A domain-specific language for smart home automation, with a C runtime library, an interpreter, an API server, and a web dashboard.",
+    "githubUrl": "https://github.com/WilliammGalvin/Apollo/blob/main/README.md",
+    "tags": ["OCaml", "C", "Go", "NextJS"],
+    "category": "other"
+  },
+  {
+    "title": "Authentication Back-end",
+    "description": "An authentication back-end with JWT support and session handling.",
+    "githubUrl": "https://github.com/WilliammGalvin/auth-backend/blob/main/README.md",
+    "tags": ["Go"],
+    "category": "go"
+  },
+  {
+    "title": "M.E.K Breakfast House",
+    "description": "A production website for a local breakfast restaurant, designed and built on request after a previous site I made for their other location. ** Source code not provided for privacy reasons **",
+    "url": "https://www.mekbreakfast.ca",
+    "tags": ["React", "NextJS", "Framer-motion", "Typescript", "TailwindCSS"],
+    "category": "web"
+  },
+  {
     "title": "williamgalvin.me",
     "description": "The portfolio website you're viewing right now!",
     "githubUrl": "https://github.com/WilliammGalvin/williamgalvin.me/blob/main/README.md",
@@ -7,71 +63,36 @@
     "category": "web"
   },
   {
-    "title": "JRegex Engine",
-    "description": "a toy regex matcher using bytecode that's run on a custom lightweight VM.",
-    "githubUrl": "https://github.com/WilliammGalvin/JRegexEngine/blob/main/README.md",
-    "tags": ["Java"],
-    "category": "java"
-  },
-  {
-    "title": "Cherry Compiler",
-    "description": "a compiler for my own programming language. It includes a full pipeline with a hand-written lexer, recursive descent parser, and an LLVM backend.",
-    "githubUrl": "https://github.com/WilliammGalvin/Cherry/blob/master/README.md",
-    "tags": ["C++", "LLVM"],
-    "category": "c-plus-plus"
-  },
-  {
-    "title": "Regex NFA Engine",
-    "description": "A toy regex matcher using non-deterministic finite automaton.",
-    "githubUrl": "https://github.com/WilliammGalvin/RegexEngine/blob/master/README.md",
-    "tags": ["Rust"],
-    "category": "rust"
-  },
-  {
-    "title": "M.E.K Breakfast House",
-    "description": "A production website for a local breakfast restaurant. Designed and built on request after the satisfaction of a previous website I made for their other restaurant. ** Source code not provided for privacy reasons **",
-    "url": "https://www.mekbreakfast.ca",
-    "tags": ["React", "NextJS", "Framer-motion", "Typescript", "TailwindCSS"],
-    "category": "web"
-  },
-  {
-    "title": "Authentication Back-end",
-    "description": "An authentication back-end with JWT support and sessions.",
-    "githubUrl": "https://github.com/WilliammGalvin/auth-backend/blob/main/README.md",
-    "tags": ["Go"],
-    "category": "go"
-  },
-  {
     "title": "Chip-8 Emulator",
-    "description": "A Chip-8 emulator completed with a debugging information UI.",
+    "description": "A Chip-8 emulator complete with a debugging information UI.",
     "githubUrl": "https://github.com/WilliammGalvin/Chip8_Emulator/blob/master/README.md",
     "tags": ["C++", "SFML"],
     "category": "c-plus-plus"
   },
   {
     "title": "Memory Allocator",
-    "description": "A toy memory allocator and a simple testing script written in C.",
+    "description": "A toy memory allocator written in C, with a simple testing script.",
     "githubUrl": "https://github.com/WilliammGalvin/MemoryAllocator/blob/main/README.md",
     "tags": ["C"],
     "category": "c"
   },
   {
     "title": "Unwind",
-    "description": "A desktop app to help unwind after a long day. The app will give you a writing prompt from one of various categories.",
+    "description": "A desktop app to help unwind after a long day. The app gives you a writing prompt from one of various categories.",
     "githubUrl": "https://github.com/WilliammGalvin/Unwind/blob/main/README.md",
     "tags": ["ElectronJS", "React", "Typescript", "TailwindCSS"],
     "category": "desktop"
   },
   {
     "title": "Diction",
-    "description": "A mobile application to find the definition of words and save them for future use. Inspired by reading philisophical texts and running into words I didn't know but would be useful to learn.",
+    "description": "A mobile application to find the definition of words and save them for future use. Inspired by reading philosophical texts and running into words I didn't know but would be useful to learn.",
     "githubUrl": "https://github.com/WilliammGalvin/diction/blob/main/README.md",
     "tags": ["Flutter", "Dart"],
     "category": "mobile"
   },
   {
     "title": "ImBored",
-    "description": "A hub for classic game remakes. Slowly adding more and more games to the collection. Currently only has a remake of the classic game 'Snake' and 'Frogger'.",
+    "description": "A hub for classic game remakes. Slowly adding more and more games to the collection. Currently has remakes of 'Snake' and 'Frogger'.",
     "githubUrl": "https://github.com/WilliammGalvin/ImBored/blob/main/README.md",
     "tags": ["C++", "SFML"],
     "category": "c-plus-plus"

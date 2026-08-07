@@ -4,19 +4,20 @@ import Navbar, { NavLinks } from "@/components/Navbar";
 import AboutSection from "@/components/sections/AboutSection";
 import ArticlesSection from "@/components/sections/ArticlesSection";
 import ContactSection from "@/components/sections/ContactSection";
-import ExtrasSection from "@/components/sections/ExtrasSection";
 import HomeSection from "@/components/sections/HomeSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import LeadershipSection from "@/components/sections/LeadershipSection";
 import useNav from "@/hooks/useNav";
 import useScreen from "@/hooks/useScreen";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function Home() {
   const linkTitles: string[] = [
     "Home",
+    "Experience",
     "About",
-    "Extras",
+    "Leadership",
     "Articles",
     "Projects",
     "Contact",
@@ -34,8 +35,9 @@ export default function Home() {
 
   const linkComponents: React.ReactNode[] = [
     <HomeSection key="home" {...{ changeLinkByTitle, isMobile }} />,
+    <ExperienceSection key="experience" />,
     <AboutSection key="about" />,
-    <ExtrasSection key="extras" />,
+    <LeadershipSection key="leadership" />,
     <ArticlesSection key="articles" />,
     <ProjectsSection key="projects" />,
     <ContactSection key="contact" />,

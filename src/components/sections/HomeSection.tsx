@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ProjectButton from "../ProjectButton";
 import NameCube from "../NameCube";
 import SectionWrapper from "../SectionWrapper";
-import Link from "next/link";
+// import Link from "next/link";
 
 const HomeSection = ({
   changeLinkByTitle,
@@ -54,7 +54,7 @@ const HomeSection = ({
           }}
         >
           <h2 className="text-5xl sm:text-6xl font-semibold leading-[1.25]">
-            Software
+            Systems
             <br />
             Developer.
           </h2>
@@ -63,12 +63,35 @@ const HomeSection = ({
             Hi, I&apos;m William 👋
           </h3>
 
-          <p className="mb-12 text-base max-w-[300px] sm:max-w-[450px]">
-            A passionate software developer. Currently dedicated to{" "}
-            <span className="font-semibold">compiler development</span> and
-            exploring the world of{" "}
-            <span className="font-semibold">programming languages</span>.
-          </p>
+          <div className="mb-12 text-base max-w-[300px] sm:max-w-[450px] space-y-3">
+            <p>
+              Currently at <span className="font-semibold">RBC Capital Markets</span>, building tools for Canada's designated market-making desk.<br />
+            </p>
+            <div>
+              <p>
+                What I&apos;m passionate about:
+              </p>
+              <ul className="list-disc ml-4 text-gray-800">
+                <li>
+                  <span>Trading systems</span><br />
+                </li>
+                <li>
+                  <span>Compilers and programming languages</span><br />
+                </li>
+                <li>
+                  <span>Performance optimization</span><br />
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              Available for{" "}
+              <span className="font-semibold">winter</span>
+              {" "}and{" "}
+              <span className="font-semibold">summer</span>
+              {" "}internships.
+            </p>
+          </div>
 
           <ProjectButton goToProject={() => changeLinkByTitle("projects")} />
         </motion.div>
