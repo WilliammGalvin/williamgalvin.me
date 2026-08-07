@@ -65,7 +65,7 @@ const HomeSection = ({
 
           <div className="mb-12 text-base max-w-[300px] sm:max-w-[450px] space-y-3">
             <p>
-              Currently at <span className="font-semibold">RBC Capital Markets</span>, building tools for Canada's designated market-making desk.<br />
+              Currently at <span className="font-semibold">RBC Capital Markets</span>, building tools for Canada&apos;s designated market-making desk.<br />
             </p>
             <div>
               <p>
