@@ -4,7 +4,6 @@ import SectionWrapper from "@/components/SectionWrapper";
 import ProjectCard from "@/components/ProjectCard";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-
 import { Indie_Flower } from "next/font/google";
 import swirlArrow from "../../../public/swirl_arrow.png";
 import useScreen from "@/hooks/useScreen";
@@ -21,15 +20,20 @@ export type ProjectData = {
 const indieFlower = Indie_Flower({ weight: "400", subsets: ["latin"] });
 
 const ProjectsSection = () => {
-  const [projects, setProjects] = useState<ProjectData[] | null>();
+  const [projects, setProjects] = useState<ProjectData[] | null>(null);
+  const [hasError, setHasError] = useState(false);
   const { isMobile } = useScreen(1380);
 
   useEffect(() => {
     const fetchProjects = async () => {
-      await fetch("./projects.json")
-        .then((res) => res.json())
-        .then((data) => setProjects(data))
-        .catch((err) => console.error("Error fetching projects", err));
+      try {
+        const res = await fetch("/projects.json");
+        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+        setProjects(await res.json());
+      } catch (err) {
+        console.error("Error fetching projects", err);
+        setHasError(true);
+      }
     };
 
     fetchProjects();
@@ -40,25 +44,48 @@ const ProjectsSection = () => {
       title={{
         header: "What I've made",
         description:
-          "Below is a list of projects that I have made within the last year to showcase my skills. They are all built off of problems that I have experienced and are my unique solutions to them.",
+          "A mix of systems work and tools built to understand how things work underneath — compilers, emulators, allocators, and low-latency infrastructure, alongside some production web work.",
       }}
     >
-      {projects ? (
+      {hasError && (
+        <div className="flex justify-center pb-12">
+          <p className="border-2 border-black bg-white p-6 max-w-[500px] text-sm">
+            Projects couldn&apos;t load. They&apos;re all on{" "}
+            <a
+              href="https://github.com/WilliammGalvin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              GitHub
+            </a>{" "}
+            in the meantime.
+          </p>
+        </div>
+      )}
+
+      {!hasError && !projects && (
+        <div className="flex justify-center pb-12">
+          <span className="text-sm text-neutral-600">Loading projects…</span>
+        </div>
+      )}
+
+      {projects && (
         <div
-          className={`${
-            isMobile() ? "mt-[125px]" : ""
-          } relative flex items-center justify-center pb-12`}
+          className={`${isMobile() ? "mt-[125px]" : ""
+            } relative flex items-center justify-center pb-12`}
         >
-          <ul className="relative grid grid-flow-row sm:grid-cols-2 gap-x-4 gap-y-7 mx-8">
-            {projects.map((proj, i) => {
-              return (
+          <div className="relative mx-8">
+            <ul className="grid grid-flow-row sm:grid-cols-2 gap-x-4 gap-y-7">
+              {projects.map((proj, i) => (
                 <li key={i}>
                   <ProjectCard props={{ ...proj }} />
                 </li>
-              );
-            })}
+              ))}
+            </ul>
 
             <div
+              aria-hidden="true"
               className="absolute flex justify-end right-0 top-0"
               style={{
                 transform: isMobile()
@@ -67,17 +94,15 @@ const ProjectsSection = () => {
               }}
             >
               <span
-                className={`${
-                  isMobile() ? "text-base" : "text-lg"
-                } mr-[-10px] mt-[-27px] ${indieFlower.className}`}
+                className={`${isMobile() ? "text-base" : "text-lg"
+                  } mr-[-10px] mt-[-27px] ${indieFlower.className}`}
               >
                 Click me for
                 <br /> more info!
               </span>
-
               <Image
                 src={swirlArrow}
-                alt="arrow"
+                alt=""
                 className={isMobile() ? "size-[40px]" : "size-[65px]"}
                 style={{
                   transform: isMobile()
@@ -86,10 +111,8 @@ const ProjectsSection = () => {
                 }}
               />
             </div>
-          </ul>
+          </div>
         </div>
-      ) : (
-        <span>...</span>
       )}
     </SectionWrapper>
   );
