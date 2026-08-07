@@ -14,11 +14,11 @@ const roles: Role[] = [
   {
     title: "Software Developer Intern",
     org: "RBC Capital Markets",
-    team: "Quantitative Technology Services — Central Risk Book",
+    team: "Quantitative Technology Services — Central Risk Book Team",
     location: "Toronto, ON",
     dates: "May – August 2026",
     context:
-      "The desk is the bank's designated market maker for Canadian equities and ETFs.",
+      "My team developed the technology for the bank's designated market making desk on Canadian equities and ETFs.",
     bullets: [
       {
         heading: "Cross-system fill reconciliation",

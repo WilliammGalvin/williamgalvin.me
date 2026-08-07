@@ -30,6 +30,7 @@ const stack: { title: string; note: string; items: string[] }[] = [
       "kdb+ / q",
       "SQL",
       "Polars",
+      "Bash",
       "CMake",
       "Qt",
       "LLVM",

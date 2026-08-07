@@ -59,11 +59,11 @@ const HomeSection = ({
             Developer.
           </h2>
 
-          <h3 className="mt-12 mb-1 font-semibold text-xl">
+          <h3 className="text-left mt-12 mb-1 font-semibold text-xl">
             Hi, I&apos;m William 👋
           </h3>
 
-          <div className="mb-12 text-base max-w-[300px] sm:max-w-[450px] space-y-3">
+          <div className="text-left mb-12 text-base max-w-[300px] sm:max-w-[450px] space-y-3">
             <p>
               Currently at <span className="font-semibold">RBC Capital Markets</span>, building tools for Canada&apos;s designated market-making desk.<br />
             </p>
@@ -117,7 +117,7 @@ const HomeSection = ({
         )}
       </div>
 
-      {isMobile() && <MobileFooterNote />}
+      {/* {isMobile() && <MobileFooterNote />} */}
     </SectionWrapper>
   );
 };

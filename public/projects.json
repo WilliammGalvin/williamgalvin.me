@@ -7,17 +7,17 @@
     "category": "c-plus-plus"
   },
   {
-    "title": "ull-messaging",
-    "description": "A messaging library with compile-time configurable transport and a zero-copy codec, tested over UDP loopback.",
-    "githubUrl": "https://github.com/WilliammGalvin/ull/blob/main/README.md",
-    "tags": ["C++"],
-    "category": "c-plus-plus"
-  },
-  {
     "title": "Cherry Compiler",
     "description": "A compiler for my own programming language. It includes a full pipeline with a hand-written lexer, recursive descent parser, and an LLVM backend.",
     "githubUrl": "https://github.com/WilliammGalvin/Cherry/blob/master/README.md",
     "tags": ["C++", "LLVM"],
+    "category": "c-plus-plus"
+  },
+  {
+    "title": "ull-messaging",
+    "description": "A messaging library with compile-time configurable transport and a zero-copy codec, tested over UDP loopback.",
+    "githubUrl": "https://github.com/WilliammGalvin/ull/blob/main/README.md",
+    "tags": ["C++"],
     "category": "c-plus-plus"
   },
   {
