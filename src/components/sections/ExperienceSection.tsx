@@ -18,23 +18,31 @@ const roles: Role[] = [
     location: "Toronto, ON",
     dates: "May – August 2026",
     context:
-      "My team developed the technology for the bank's designated market making desk on Canadian equities and ETFs.",
+      "My team develops the technology for the bank's designated market making desk on Canadian equities and ETFs.",
     bullets: [
       {
         heading: "Cross-system fill reconciliation",
-        body: "Built a kdb+ to Polars pipeline reconciling fills between the risk-management system of record and the drop-copied ultra-high-frequency system, surfacing matches and one-sided breaks from either side. Paired it with a continuous intraday monitor that alerts on discrepancies as they appear. Both run in production every trading day.",
+        body: "Built a Polars pipeline over two kdb+ tables reconciling executed fills from the desk's ultra-high-frequency trading system against the drop copies recorded by the strategy system that instructed them. The two desync on ungraceful shutdown of either side, and the gap has to be closed by hand with paper fills. A continuous intraday monitor flags and localizes one-sided breaks within two minutes, replacing manual discovery and cutting the time to get both systems back in sync. Runs in production every trading day.",
       },
       {
-        heading: "Release engineering for a Qt/C++ trading GUI",
-        body: "Owned build, test, and release for one of the desk's core trading system's GUI. Restructured CMake into a monorepo with proper path dependencies, added a unit test suite and a bundled launcher, and wrote a PowerShell pipeline handling automated versioning, pre-release promotion to production, and rollback.",
+        heading: "Launcher and release pipeline for a Qt/C++ trading GUI",
+        body: "Replaced a manual build-and-copy deployment — hand-building the GUI and dropping the executable on a shared drive — with a Qt/C++ launcher that checks the GitHub Enterprise Releases API on every start and runs the latest build from a local version cache, with pinned rollback and opt-in prereleases. Backed by a PowerShell release pipeline automating versioning, prerelease promotion to production, and setLatest tag management.",
+      },
+      {
+        heading: "Build system and test coverage for the trading GUI",
+        body: "Authored the CMake build system for the GUI traders use to control live market-making strategies, restructuring it into a monorepo with proper shared-dependency resolution. Wrote its full unit test suite and developer documentation so the desk could extend and maintain it after handoff.",
       },
       {
         heading: "Log compression for long-term retention",
         body: "Cut compressed trading-system logs by a further 20.9% on top of gzip across a seven-year retention archive, using frequency analysis to select key tuples for substitution. Output stays human-readable and rehydrates to a byte-exact MD5 match.",
       },
       {
-        heading: "Compliance and operations automation",
-        body: "Replaced a legacy Java reporting job with a centralized designated-market-maker securities table, split into a write path and a read-only report generator. Built an IMAP IDLE inbox monitor with config-driven parsers, missing-message alerting, and session recovery across the trading day. Modernized the UHF trading-parameter downloader from Bash into configurable Python.",
+        heading: "DMM compliance reporting",
+        body: "Rewrote a legacy Java reporter producing the desk's designated market maker securities report, against revised requirements for end-of-day book handling and restricted symbols. Replaced per-run scratch-table repopulation and a monolithic query with a pipeline that reads exchange-published files and database tables into separate frames, normalizes each independently, and joins into a persistent securities table — reducing report generation to a single join against the security master.",
+      },
+      {
+        heading: "Operations automation",
+        body: "Built an IMAP IDLE inbox monitor with config-driven parsers, missing-message alerting, and session recovery across the trading day. Modernized the UHF trading-parameter downloader from Bash into configurable Python.",
       },
     ],
   },
